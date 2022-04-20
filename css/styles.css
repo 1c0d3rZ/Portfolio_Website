@@ -8,10 +8,6 @@
     scrollbar-width: 0px;
 }
 
-::selection {
-    background-color: none;
-}
-
 :root {
     --var-red: #fd2c2c;
     --var-dark: #000000;
@@ -39,7 +35,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     display: grid;
-    background-color: var(--var-dark);
+    background-color: var(--var-gray);
     scroll-behavior: smooth;
 }
 
@@ -131,7 +127,7 @@ body {
     color: white;
     justify-self: center;
     margin-top: 90px;
-    background-color: var(--var-dark);
+    background-color: var(--var-gray);
     border: 2px solid var(--var-gray);
     font-family: "Josefin";
 }
@@ -140,8 +136,6 @@ body {
     width: 100%;
     display: grid;
     padding: 30px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.875), rgba(0, 0, 0, 0.809)), url(../img/bg.png);
     background-position: fixed;
     background-repeat: no-repeat;
@@ -474,7 +468,7 @@ nav ul li a:hover::before {
     font-family: "Titilium";
     width: 100%;
     margin: 100px 0;
-    background-color: var(--var-dark);
+    background-color: var(--var-gray);
 }
 
 .about-title {
@@ -548,10 +542,11 @@ nav ul li a:hover::before {
 .about-contact-btn a {
     text-decoration: none;
     color: #fff;
+    font-weight: bold;
     padding: 15px 30px;
     text-transform: uppercase;
     background-color: var(--var-red);
-    border: 3px solid var(--var-red);
+    border: 2px solid var(--var-red);
     transition: .4s;
 }
 
@@ -585,7 +580,7 @@ nav ul li a:hover::before {
     align-items: center;
     width: 100%;
     margin: 100px 0;
-    background-color: var(--var-dark);
+    background-color: var(--var-gray);
 }
 
 .skills-title {
