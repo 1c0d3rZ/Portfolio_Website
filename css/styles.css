@@ -42,6 +42,12 @@ body {
     scroll-behavior: smooth;
 }
 
+body>span,
+.my-page>span {
+    opacity: 0;
+    background-color: transparent;
+}
+
 
 /* My whole entire page */
 
@@ -227,13 +233,17 @@ nav ul li a:hover::before {
     }
 }
 
+::-webkit-scrollbar {
+    width: 0%;
+}
+
 
 /* Home, Profile Picture, Names ... */
 
 .home {
     display: flex;
     flex-wrap: wrap;
-    margin: 200px auto;
+    margin: 80px auto;
     align-items: center;
     gap: 60px;
 }
