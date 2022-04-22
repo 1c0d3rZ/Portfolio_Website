@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
     -webkit-scroll-behavior: smooth;
     scrollbar-width: 0px;
+    border: none;
 }
 
 ::selection {
@@ -58,7 +59,6 @@ body>span,
     justify-self: center;
     margin-top: 90px;
     background-color: var(--var-gray);
-    border: 2px solid var(--var-gray);
     font-family: "Josefin";
 }
 
@@ -66,10 +66,29 @@ body>span,
     width: 100%;
     display: grid;
     padding: 30px;
-    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.205), var(--var-gray)), url(../img/bg.png);
-    background-position: fixed;
+    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0), var(--var-gray)), url(../img/bg.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media (max-width: 750px) {
+    .home-header {
+        padding: 0;
+        margin: 0vh auto 100px auto;
+        display: grid;
+        align-content: space-between;
+    }
+    .home {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 36px auto;
+        align-items: center;
+        gap: 19px;
+        display: grid;
+        text-align: center;
+        padding: 0;
+    }
 }
 
 
@@ -111,7 +130,7 @@ nav ul li a {
     color: white;
     padding: 5px 8px;
     margin: 0 10px;
-    font-size: 25px;
+    font-size: 18px;
     text-transform: capitalize;
     position: relative;
 }
@@ -159,9 +178,6 @@ nav ul li a:hover::before {
     }
     nav ul li a {
         font-size: 1.5rem;
-    }
-    nav {
-        border: 2px solid var(--var-gray);
     }
     #comment {
         display: block;
@@ -243,7 +259,7 @@ nav ul li a:hover::before {
 .home {
     display: flex;
     flex-wrap: wrap;
-    margin: 80px auto;
+    margin: 170px auto;
     align-items: center;
     gap: 60px;
 }
@@ -252,7 +268,6 @@ nav ul li a:hover::before {
     .home {
         display: grid;
         text-align: center;
-        margin: 130px auto;
         padding: 0;
     }
     .home img {
@@ -264,7 +279,7 @@ nav ul li a:hover::before {
 
 .home img {
     width: 300px;
-    border: 3px var(--var-gray);
+    border: 3px solid var(--var-gray);
     padding: 10px;
     border-radius: 50%;
 }
@@ -419,7 +434,7 @@ nav ul li a:hover::before {
     .bottom-bar {
         display: flex;
         font-size: 1rem;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: 0px;
         width: 100%;
     }
@@ -429,8 +444,12 @@ nav ul li a:hover::before {
         text-align: center;
         align-self: center;
         min-width: 170px;
+        width: 100%;
+        justify-content: center;
     }
     .socials-links {
+        width: 60%;
+        margin-bottom: 30px;
         padding: 0%;
         display: flex;
         flex-wrap: nowrap;
@@ -446,8 +465,7 @@ nav ul li a:hover::before {
 
 .contact-btn a {
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10px;
     color: #fff;
     text-transform: uppercase;
     border: 2px solid var(--var-red);
@@ -482,7 +500,7 @@ nav ul li a:hover::before {
     font-family: "Titilium";
     width: 100%;
     margin: 100px 0;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.815), var(--var-gray)), url(../img/about_bg.jpg);
+    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.736), var(--var-gray)), url(../img/about_bg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -514,9 +532,20 @@ nav ul li a:hover::before {
 }
 
 .about-details img {
+    position: relative;
     width: 400px;
-    margin: 0px 10px;
-    border-radius: 20px;
+    margin: 0px 40px;
+}
+
+.about-details img::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 90%;
+    border: 10px solid var(--var-red);
+    top: -10%;
+    right: -10%;
+    left: -10%;
 }
 
 .about-details-text {
@@ -526,8 +555,9 @@ nav ul li a:hover::before {
 }
 
 .about-text {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-indent: 20px;
+    line-break: initial;
 }
 
 .about-text span {
@@ -536,14 +566,10 @@ nav ul li a:hover::before {
 }
 
 .about-text a {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    margin: 0 5px;
     width: fit-content;
-    letter-spacing: 1.5px;
     text-decoration: none;
     color: var(--var-red);
-    text-transform: uppercase;
     transition: all .3s;
 }
 
@@ -590,6 +616,7 @@ nav ul li a:hover::before {
     .about-text {
         margin: 50px auto;
         width: 80%;
+        padding: 0%;
     }
 }
 
@@ -602,7 +629,7 @@ nav ul li a:hover::before {
     align-items: center;
     width: 100%;
     padding: 100px 0;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.747), var(--var-gray)), url(../img/skills_bg.png);
+    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.439), var(--var-gray)), url(../img/skills_bg.png);
     background-size: cover;
     background-position: center;
 }
@@ -628,7 +655,6 @@ nav ul li a:hover::before {
     justify-content: center;
     justify-self: center;
     margin: 50px auto;
-    border-radius: 20px;
     align-items: center;
     font-size: 2rem;
     width: 90%;
@@ -762,7 +788,6 @@ progress {
         width: 400px;
     }
     .projects-spec {
-        width: 90%;
         display: flex;
         width: 100%;
         margin: 40px auto;
@@ -770,12 +795,44 @@ progress {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 920px) {
+    .projects-design,
+    .projects-web,
+    .projects-app {
+        display: flex;
+        gap: 0;
+        margin: 0;
+    }
+    .projects-spec {
+        width: 100%;
+        display: flex;
+        margin: 50px 0;
+        padding: 0px;
+    }
+    .projects-design img,
+    .projects-web img,
+    .projects-app img,
+    .description {
+        width: 50%;
+    }
+    .description {
+        display: grid;
+        align-self: stretch;
+        vertical-align: middle;
+        align-content: center;
+        font-size: 1.7rem;
+        padding: 10px;
+        text-align: center;
+        background: radial-gradient(circle, rgba(74, 74, 74, 0.278), rgba(39, 38, 38, 0.455));
+    }
+}
+
+@media (max-width: 700px) {
     .projects-design,
     .projects-web,
     .projects-app {
         display: grid;
-        width: 450px;
+        width: 500px;
         align-self: center;
         align-items: center;
         margin: 30px 0px;
@@ -785,7 +842,7 @@ progress {
     .projects-design img,
     .projects-web img,
     .projects-app img {
-        width: 450px;
+        width: 100%;
         border-radius: 10px;
     }
     .description {
@@ -799,7 +856,7 @@ progress {
         padding: 10px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        width: 450px;
+        width: 100%;
     }
     .projects-spec {
         display: flex;
@@ -916,7 +973,7 @@ progress {
     margin: 200px auto 0px auto;
     padding-top: 50px;
     padding-left: 30px;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.76), var(--var-gray)), url(../img/contact_bg.png);
+    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.457), var(--var-gray)), url(../img/contact_bg.png);
     background-size: cover;
     background-position: center;
     z-index: -2;
