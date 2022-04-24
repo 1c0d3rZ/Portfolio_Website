@@ -6,10 +6,8 @@
     -webkit-scroll-behavior: smooth;
     scrollbar-width: 10px;
     border: none;
-}
-
-::selection {
-    user-select: none;
+    user-select: var(--var-gold);
+    -webkit-user-drag: none;
 }
 
 :root {
@@ -226,7 +224,7 @@ nav ul li a:hover::before {
         width: 100%;
         height: 100%;
         background: var(--var-gray);
-        top: -100%;
+        top: -140%;
         align-content: flex-start;
         left: 0;
         text-align: center;
@@ -521,6 +519,8 @@ nav ul li a:hover::before {
 }
 
 
+/* End Home Section */
+
 /* About Section */
 
 .about {
@@ -563,8 +563,9 @@ nav ul li a:hover::before {
     position: relative;
     max-width: 400px;
     margin: 0px 40px;
-    border-left: 10px solid var(--var-red);
-    border-top: 10px solid var(--var-red);
+    border-left: 5px solid var(--var-gray);
+    border-right: 5px solid var(--var-gray);
+    border-radius: 10px;
 }
 
 .about-details-text {
@@ -576,6 +577,7 @@ nav ul li a:hover::before {
 .about-text {
     font-size: 1.2rem;
     text-indent: 20px;
+    width: 90%;
     line-break: initial;
 }
 
@@ -635,8 +637,9 @@ nav ul li a:hover::before {
     }
 
     .about-text {
+        text-align: center;
         margin: 30px auto;
-        width: 100%;
+        width: 90%;
         padding: 0;
     }
 }
@@ -1125,6 +1128,14 @@ progress {
     align-items: center;
 }
 
+.contact-phone div {
+    display: grid;
+}
+
+.personnal div span {
+    user-select: text var(--var-gold);
+}
+
 .socials {
     display: flex;
     flex-wrap: nowrap;
@@ -1155,6 +1166,7 @@ progress {
         display: grid;
         justify-content: center;
     }
+
     .contact-spec {
         display: grid;
         flex-direction: column;
