@@ -4,7 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     -webkit-scroll-behavior: smooth;
-    scrollbar-width: 0px;
+    scrollbar-width: 10px;
     border: none;
 }
 
@@ -36,7 +36,7 @@
 
 body {
     font-family: "Josefin";
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
     display: grid;
     background-color: var(--var-gray);
@@ -53,11 +53,11 @@ body>span,
 /* My whole entire page */
 
 .my-page {
-    max-width: 100%;
+    width: 100%;
     max-width: 1500px;
     color: white;
     justify-self: center;
-    margin-top: 90px;
+    margin-top: 70px;
     background-color: var(--var-gray);
     font-family: "Josefin";
 }
@@ -72,13 +72,20 @@ body>span,
     background-size: cover;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 960px) {
+    .my-page {
+        width: 100vw;
+        justify-self: center;
+    }
+
     .home-header {
+        width: 100vw;
         padding: 0;
         margin: 0vh auto 100px auto;
         display: grid;
         align-content: space-between;
     }
+
     .home {
         display: flex;
         flex-wrap: wrap;
@@ -106,13 +113,13 @@ nav * {
     position: fixed;
     background: var(--var-gray);
     width: 100%;
-    height: 90px;
+    height: 70px;
     padding: 0 50px;
     z-index: 4;
 }
 
 .logo img {
-    width: 50px;
+    width: 40px;
     margin: 10px;
 }
 
@@ -156,8 +163,7 @@ nav ul li a:hover::before {
     font-size: 30px;
     color: white;
     float: left;
-    line-height: 80px;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -176,9 +182,11 @@ nav ul li a:hover::before {
         display: block;
         float: right;
     }
+
     nav ul li a {
         font-size: 1.5rem;
     }
+
     #comment {
         display: block;
         color: var(--var-dark);
@@ -186,9 +194,11 @@ nav ul li a:hover::before {
         align-self: flex-end;
         font-size: 2rem;
     }
+
     #comment i {
         color: var(--var-red);
     }
+
     nav ul li a::before {
         content: "";
         background-color: var(--var-red);
@@ -199,52 +209,60 @@ nav ul li a:hover::before {
         right: -5%;
         transition: .3s ease;
     }
+
     nav ul li a:hover::before {
         width: 110%;
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
+
     .menu {
-        display: inline-block;
-        padding: 0 30px;
+        display: flex;
+        padding: 0 10px;
     }
+
     ul {
-        display: inherit;
+        display: grid;
         position: fixed;
         width: 100%;
         height: 100%;
         background: var(--var-gray);
         top: -100%;
-        align-content: space-between;
+        align-content: flex-start;
         left: 0;
         text-align: center;
         transition: all .5s;
         z-index: -1;
     }
+
     nav ul li:not(last-child) {
         display: block;
         transition: transform .5s ease;
         transition-delay: .5s;
     }
+
     nav ul li a {
         font-size: 2rem;
     }
+
     nav ul li a:hover,
     nav ul li a:active,
     nav ul li a:focus {
         background: none;
         color: var(--var-red);
     }
+
     #check:checked~.checkbtn i {
         color: var(--var-red);
     }
+
     #check:checked~ul {
-        top: 80px;
+        top: 60px;
         left: 0;
         transform: translateX(1);
     }
+
     .logo {
         float: left;
-        padding: 5px;
         margin: 5px;
     }
 }
@@ -259,7 +277,7 @@ nav ul li a:hover::before {
 .home {
     display: flex;
     flex-wrap: wrap;
-    margin: 170px auto;
+    margin: 160px auto;
     align-items: center;
     gap: 60px;
 }
@@ -269,9 +287,12 @@ nav ul li a:hover::before {
         display: grid;
         text-align: center;
         padding: 0;
+        margin: 120px auto;
+        width: 100vw;
     }
+
     .home img {
-        min-width: 250px;
+        min-width: 50vw;
         padding: 0;
         margin: 0 auto;
     }
@@ -295,7 +316,7 @@ nav ul li a:hover::before {
 }
 
 .text h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: transparent;
     position: relative;
     width: fit-content;
@@ -333,6 +354,7 @@ nav ul li a:hover::before {
         width: 100%;
         left: 0;
     }
+
     100% {
         width: 0%;
         left: 100%;
@@ -356,6 +378,8 @@ nav ul li a:hover::before {
     justify-content: center;
     font-size: 2rem;
     letter-spacing: 1.8px;
+    text-align: center;
+    justify-self: center;
 }
 
 .text h2 span {
@@ -372,9 +396,9 @@ nav ul li a:hover::before {
     .home img {
         width: 150px;
     }
+
     .text {
         font-size: 1.7rem;
-        letter-spacing: 1px;
     }
 }
 
@@ -413,18 +437,22 @@ nav ul li a:hover::before {
 @media (max-width: 1000px) {
     .bottom-bar {
         display: grid;
+        width: 100vw;
         gap: 40px;
         justify-content: center;
         align-items: center;
     }
+
     .socials-links {
         display: flex;
         flex-wrap: wrap;
     }
+
     .socials-links a {
         z-index: 1;
         transition: .3s;
     }
+
     .contact-btn {
         justify-self: center;
     }
@@ -436,8 +464,8 @@ nav ul li a:hover::before {
         font-size: 1rem;
         flex-wrap: wrap;
         gap: 0px;
-        width: 100%;
     }
+
     .contact-btn {
         margin: 0;
         display: flex;
@@ -447,13 +475,15 @@ nav ul li a:hover::before {
         width: 100%;
         justify-content: center;
     }
+
     .socials-links {
-        width: 60%;
+        width: 80%;
         margin-bottom: 30px;
         padding: 0%;
         display: flex;
         flex-wrap: nowrap;
     }
+
     .socials-links a {
         margin: 0;
     }
@@ -506,7 +536,6 @@ nav ul li a:hover::before {
 }
 
 .about-title {
-    transform: skewX(-10deg);
     text-align: right;
     font-family: "Titilium";
     font-size: 2.5rem;
@@ -521,10 +550,9 @@ nav ul li a:hover::before {
 
 .about-details {
     display: flex;
-    max-width: 90%;
+    width: 90%;
     margin: 50px auto;
     padding: 10px;
-    border-radius: 20px;
     padding: 50px 20px;
     justify-self: center;
     justify-content: center;
@@ -533,19 +561,10 @@ nav ul li a:hover::before {
 
 .about-details img {
     position: relative;
-    width: 400px;
+    max-width: 400px;
     margin: 0px 40px;
-}
-
-.about-details img::before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 90%;
-    border: 10px solid var(--var-red);
-    top: -10%;
-    right: -10%;
-    left: -10%;
+    border-left: 10px solid var(--var-red);
+    border-top: 10px solid var(--var-red);
 }
 
 .about-details-text {
@@ -612,11 +631,30 @@ nav ul li a:hover::before {
     .about-details {
         display: flex;
         flex-wrap: wrap;
+
     }
+
     .about-text {
+        margin: 30px auto;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 820px) {
+    .about {
+        width: 100vw;
+        margin: 50px 0;
+    }
+
+    .about-details {
+        width: 100vw;
         margin: 50px auto;
-        width: 80%;
-        padding: 0%;
+        padding: 10px;
+    }
+
+    .about-details img {
+        width: 70vw;
     }
 }
 
@@ -635,7 +673,6 @@ nav ul li a:hover::before {
 }
 
 .skills-title {
-    transform: skewX(-10deg);
     text-align: right;
     font-family: "Titilium", sans-serif;
     font-size: 2.5rem;
@@ -658,7 +695,7 @@ nav ul li a:hover::before {
     align-items: center;
     font-size: 2rem;
     width: 90%;
-    padding: 10px 30px;
+    padding: 10px 0px;
 }
 
 .skills-html,
@@ -671,7 +708,7 @@ nav ul li a:hover::before {
     justify-content: center;
     justify-self: center;
     width: 400px;
-    margin: 20px 20px;
+    margin: 20px 10px;
 }
 
 .skills-html-img,
@@ -708,6 +745,20 @@ progress {
     color: #ff0;
 }
 
+@media (max-width: 700px) {
+    .skills {
+        width: 100vw;
+        padding: 30px 0;
+    }
+
+    .skills-html,
+    .skills-css,
+    .skills-php,
+    .skills-js {
+        width: 90%;
+    }
+}
+
 
 /* Projects section design */
 
@@ -723,7 +774,6 @@ progress {
 }
 
 .projects-title {
-    transform: skewX(-10deg);
     text-align: right;
     font-family: "Titilium", sans-serif;
     font-size: 2.5rem;
@@ -768,6 +818,7 @@ progress {
 }
 
 @media (max-width: 1300px) {
+
     .projects-design,
     .projects-web,
     .projects-app {
@@ -777,16 +828,19 @@ progress {
         margin: 40px 10px;
         gap: 50px;
     }
+
     .projects-design img,
     .projects-web img,
     .projects-app img {
         max-width: 700px;
         width: 300px;
     }
+
     .description {
         max-width: 500px;
         width: 400px;
     }
+
     .projects-spec {
         display: flex;
         width: 100%;
@@ -796,6 +850,11 @@ progress {
 }
 
 @media (max-width: 920px) {
+    .projects {
+        padding: 1rem 0px;
+        margin: 100px auto;
+    }
+
     .projects-design,
     .projects-web,
     .projects-app {
@@ -803,75 +862,106 @@ progress {
         gap: 0;
         margin: 0;
     }
+
     .projects-spec {
-        width: 100%;
+        width: 100vw;
         display: flex;
         margin: 50px 0;
         padding: 0px;
     }
+
     .projects-design img,
     .projects-web img,
     .projects-app img,
     .description {
         width: 50%;
     }
+
     .description {
         display: grid;
         align-self: stretch;
         vertical-align: middle;
         align-content: center;
-        font-size: 1.7rem;
+        font-size: calc(1rem + 3vw);
         padding: 10px;
+        max-width: 100%;
         text-align: center;
         background: radial-gradient(circle, rgba(74, 74, 74, 0.278), rgba(39, 38, 38, 0.455));
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 960px) {
+
     .projects-design,
     .projects-web,
     .projects-app {
         display: grid;
-        width: 500px;
+        width: fit-content;
         align-self: center;
         align-items: center;
         margin: 30px 0px;
         position: relative;
         gap: 10px;
     }
+
+    .projects-design:hover .description,
+    .projects-web:hover .description,
+    .projects-app:hover .description,
+    .projects-design:focus .description,
+    .projects-web:focus .description,
+    .projects-app:focus .description,
+    .projects-design:active .description,
+    .projects-web:active .description,
+    .projects-app:active .description {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(1rem + 2vw);
+    }
+
     .projects-design img,
     .projects-web img,
     .projects-app img {
         width: 100%;
+        height: 100%;
         border-radius: 10px;
     }
+
     .description {
+        display: none;
         position: absolute;
         margin: 0 auto;
         bottom: 0%;
-        height: 150px;
+        height: 100%;
+        right: 0;
+        left: 0;
         overflow: scroll;
         scrollbar-width: none;
-        background: linear-gradient(to top, rgb(37, 37, 37), rgba(66, 66, 66, 0.884), rgb(0, 0, 0, 0));
+        background: radial-gradient(center, gray, lightgray);
         padding: 10px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         width: 100%;
+        transition: 1s;
     }
+
     .projects-spec {
         display: flex;
-        width: 90%;
+        width: 100%;
         border-radius: 10px;
         flex-direction: column;
+        justify-content: center;
         margin: 40px auto;
         padding: 10px;
     }
-    .projects {
-        background-color: transparent;
+
+    .projects-title {
+        width: 90vw;
     }
 }
 
 @media (max-width: 550px) {
+
     .projects-design,
     .projects-web,
     .projects-app,
@@ -879,7 +969,7 @@ progress {
     .projects-web img,
     .projects-app img,
     .description {
-        width: 350px;
+        width: 90%;
     }
 }
 
@@ -909,7 +999,6 @@ progress {
 }
 
 .enterprise-title {
-    transform: skewX(-10deg);
     text-align: right;
     max-width: 90%;
     text-align: right;
@@ -934,7 +1023,7 @@ progress {
 }
 
 .enterprise-icon img {
-    width: 200px;
+    max-width: 200px;
 }
 
 @media (max-width: 1000px) {
@@ -945,9 +1034,11 @@ progress {
         justify-content: center;
         background-color: transparent;
     }
+
     .enterprise::before {
         display: none;
     }
+
     .enterprise-icon {
         width: 90%;
         background-color: #fff;
@@ -955,11 +1046,19 @@ progress {
         padding: 10px;
         justify-self: center;
     }
+
     .enterprise-title {
+        font-size: calc(1rem * 3vw);
         margin-bottom: 30px;
+        padding: 0;
     }
+
     .contact {
         margin-top: 50px;
+    }
+
+    .enterprise-icon img {
+        max-width: 40vw;
     }
 }
 
@@ -972,7 +1071,6 @@ progress {
     width: 100%;
     margin: 200px auto 0px auto;
     padding-top: 50px;
-    padding-left: 30px;
     background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.457), var(--var-gray)), url(../img/contact_bg.png);
     background-size: cover;
     background-position: center;
@@ -981,15 +1079,14 @@ progress {
 
 .contact-title {
     display: flex;
-    padding: 0 40px;
-    justify-content: space-between;
+    margin-bottom: 20px;
+    justify-self: center;
     align-items: center;
     text-align: right;
     font-family: "Titilium", sans-serif;
     font-size: 2rem;
-    max-width: 95%;
+    max-width: 95vw;
     z-index: 1;
-    transform: skewX(-10deg);
 }
 
 .contact-title span {
@@ -1001,16 +1098,18 @@ progress {
 
 .contact-spec {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 60px;
     margin-bottom: 100px;
+    width: 95%;
 }
 
 .personnal,
 .socials {
     display: flex;
     flex-wrap: wrap;
-    max-width: 550px;
+    font-size: 1.7rem;
+    max-width: 500px;
     align-items: center;
     justify-content: left;
     margin-top: 50px;
@@ -1049,46 +1148,61 @@ progress {
     margin: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 820px) {
     .personnal div {
+        font-size: calc(1rem + 2vw);
         width: 100%;
         display: grid;
-        margin: 10px 20px;
+        justify-content: center;
+    }
+    .contact-spec {
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 100px;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 960px) {
     .contact {
+        width: 100%;
         margin-top: 100px;
         padding-top: 50px;
         margin-bottom: 0px;
     }
+
     .contact-spec {
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 60px;
+        display: grid;
+        justify-content: center;
+        gap: 50px;
         margin-top: 100px;
+        width: 100vw;
+        margin: 0%;
     }
+
     .personnal,
     .socials {
         display: flex;
         text-align: center;
         justify-content: center;
         flex-wrap: wrap;
-        font-size: 2rem;
         margin: 0;
     }
+
     .personnal div {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         flex-direction: column;
     }
+
     .socials a i {
         padding: 5px;
     }
+
     .socials a {
-        margin: 5px;
+        margin: 10px;
     }
 }
 
