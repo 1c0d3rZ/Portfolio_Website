@@ -942,14 +942,6 @@ progress {
     }
 }
 
-@media (max-width: 550px) {
-    .projects-design,
-    .projects-web,
-    .projects-app .description {
-        width: 90%;
-    }
-}
-
 
 /* Enterprise */
 
