@@ -843,7 +843,7 @@ progress {
         display: flex;
         gap: 0;
         margin: 0;
-        width: fit-content;
+        /* width: 90%; */
     }
     .projects-spec {
         width: 100vw;
@@ -868,6 +868,7 @@ progress {
         height: 100%;
         right: 0;
         left: 0;
+        width: 100%;
         overflow: scroll;
         scrollbar-width: none;
         background: radial-gradient(circle, #020202a9, #000000e0);
