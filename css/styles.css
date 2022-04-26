@@ -871,8 +871,7 @@ progress {
         overflow: scroll;
         scrollbar-width: none;
         background: radial-gradient(circle, #020202a9, #000000e0);
-        padding: 10px;
-        /* width: 100%; */
+        padding: 0px;
         border-radius: 10px;
         transition: .5s;
         font-size: calc(14px + 2vw);
@@ -890,7 +889,6 @@ progress {
         align-items: center;
         margin: 30px auto;
         position: relative;
-        width: 90%;
     }
     .projects-design:hover .description,
     .projects-web:hover .description,
@@ -923,8 +921,8 @@ progress {
         overflow: scroll;
         scrollbar-width: none;
         background: radial-gradient(circle, #020202a9, #000000e0);
-        padding: 10px;
-        width: 90%;
+        padding: 0px;
+        width: 100%;
         border-radius: 10px;
         transition: .5s;
         font-size: calc(14px + 2vw);
@@ -946,11 +944,7 @@ progress {
 @media (max-width: 550px) {
     .projects-design,
     .projects-web,
-    .projects-app,
-    .projects-design img,
-    .projects-web img,
-    .projects-app img,
-    .description {
+    .projects-app .description {
         width: 90%;
     }
 }
