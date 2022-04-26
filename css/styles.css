@@ -11,9 +11,9 @@
 }
 
 :root {
-    --var-red: #e43d3dda;
+    --var-red: #f30b39;
     --var-dark: #000000;
-    --var-gray: #4d4b4b;
+    --var-gray: #2e2e2e;
     --var-gold: #a6ff00;
 }
 
@@ -22,15 +22,6 @@
     src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
 }
 
-@font-face {
-    font-family: "Titilium";
-    src: url(../fonts/TitilliumWeb-Regular.ttf);
-}
-
-@font-face {
-    font-family: "Poppins";
-    src: url(../fonts/Poppins-Regular.ttf);
-}
 
 body {
     font-family: "Josefin";
@@ -56,7 +47,6 @@ body>span,
     justify-self: center;
     margin-top: 70px;
     background-color: var(--var-gray);
-    font-family: "Josefin";
 }
 
 .home-header {
@@ -513,7 +503,7 @@ nav ul li a:hover::before {
     display: grid;
     justify-content: center;
     align-items: center;
-    font-family: "Titilium";
+    font-family: "Josefin";
     width: 100%;
     margin: 300px 0;
     background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.736), var(--var-gray)), url(../img/about_bg.jpg);
@@ -523,7 +513,7 @@ nav ul li a:hover::before {
 
 .about-title {
     text-align: right;
-    font-family: "Titilium";
+    font-family: "Josefin";
     font-size: 2.5rem;
     max-width: 90%;
 }
@@ -659,7 +649,7 @@ nav ul li a:hover::before {
 
 .skills-title {
     text-align: right;
-    font-family: "Titilium", sans-serif;
+    font-family: "Josefin", sans-serif;
     font-size: 2.5rem;
     max-width: 90%;
     text-align: right;
@@ -761,7 +751,7 @@ progress {
 
 .projects-title {
     text-align: right;
-    font-family: "Titilium", sans-serif;
+    font-family: "Josefin", sans-serif;
     font-size: 2.5rem;
     max-width: 90%;
     text-align: right;
@@ -795,7 +785,6 @@ progress {
 .projects-web img,
 .projects-app img {
     max-width: 700px;
-    width: 500px;
 }
 
 .description {
@@ -818,7 +807,7 @@ progress {
     .projects-web img,
     .projects-app img {
         max-width: 700px;
-        width: 500px;
+        width: max-content;
     }
     .description {
         max-width: 500px;
@@ -871,7 +860,7 @@ progress {
         width: 100%;
         overflow: scroll;
         scrollbar-width: none;
-        background: radial-gradient(circle, #020202a9, #000000e0);
+        background: radial-gradient(circle, --var-gray, transparent);
         padding: 0px;
         border-radius: 10px;
         transition: .5s;
@@ -932,7 +921,8 @@ progress {
     .projects-spec {
         display: flex;
         border-radius: 10px;
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
         justify-content: center;
         margin: 40px auto;
         padding: 10px;
@@ -1047,7 +1037,7 @@ progress {
     justify-self: center;
     align-items: center;
     text-align: right;
-    font-family: "Titilium", sans-serif;
+    font-family: "Josefin", sans-serif;
     font-size: 2rem;
     max-width: 95vw;
     z-index: 1;
