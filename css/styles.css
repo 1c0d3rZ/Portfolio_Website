@@ -11,7 +11,7 @@
 }
 
 :root {
-    --var-red: #ff0033da;
+    --var-red: #e43d3dda;
     --var-dark: #000000;
     --var-gray: #4d4b4b;
     --var-gold: #a6ff00;
@@ -631,7 +631,7 @@ nav ul li a:hover::before {
 @media (max-width: 820px) {
     .about {
         width: 100vw;
-        margin: 50px 0;
+        margin: 260px 0 0px 0;
     }
     .about-details {
         width: 100vw;
