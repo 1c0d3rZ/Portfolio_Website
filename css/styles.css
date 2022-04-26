@@ -11,10 +11,10 @@
 }
 
 :root {
-    --var-red: rgb(255, 0, 51);
+    --var-red: #ff0033da;
     --var-dark: #000000;
-    --var-gray: #272727;
-    --var-gold: #ff9900;
+    --var-gray: #4d4b4b;
+    --var-gold: #a6ff00;
 }
 
 @font-face {
@@ -71,12 +71,13 @@ body>span,
     background-size: cover;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
     .my-page {
         width: 100vw;
         justify-self: center;
     }
     .home-header {
+        margin-bottom: 600px;
         width: 100vw;
         padding: 0;
         margin: 0 auto 100px auto;
@@ -514,7 +515,7 @@ nav ul li a:hover::before {
     align-items: center;
     font-family: "Titilium";
     width: 100%;
-    margin: 100px 0;
+    margin: 300px 0;
     background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.736), var(--var-gray)), url(../img/about_bg.jpg);
     background-size: cover;
     background-position: center;
@@ -712,6 +713,7 @@ nav ul li a:hover::before {
 progress {
     width: 90%;
     height: 10px;
+    margin-bottom: 10px;
 }
 
 [class="fab fa-html5"] {
@@ -799,7 +801,7 @@ progress {
 .description {
     max-width: 800px;
     width: 700px;
-    font-size: calc(5px + 1.5vw);
+    font-size: calc(5px + 1vw);
 }
 
 @media (max-width: 1300px) {
