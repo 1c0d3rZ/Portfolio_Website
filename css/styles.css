@@ -55,7 +55,7 @@ body>span,
     display: grid;
     height: 90vh;
     align-items: flex-end;
-    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0), var(--var-gray)), url(../img/bg.png);
+    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.534), var(--var-gray)), url(../img/bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -530,7 +530,7 @@ nav ul li a:hover::before {
     font-family: "Josefin";
     width: 100%;
     margin: 200px 0 60px 0;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.736), var(--var-gray)), url(../img/about_bg.jpg);
+    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.842), var(--var-gray)), url(../img/about_bg.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -671,7 +671,7 @@ nav ul li a:hover::before {
     align-items: center;
     width: 100%;
     padding: 100px 0;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.439), var(--var-gray)), url(../img/skills_bg.png);
+    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.705), var(--var-gray)), url(../img/skills_bg.png);
     background-size: cover;
     background-position: center;
 }
@@ -771,15 +771,15 @@ progress {
 .projects {
     width: 100%;
     padding: 3rem 0px;
-    margin: 200px auto;
+    margin: 200px auto 100px auto;
     display: grid;
     flex-direction: column;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.623), var(--var-gray)), url(../img/projects_bg.png);
+    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.733), var(--var-gray)), url(../img/projects_bg.png);
     background-size: cover;
     background-position: center;
 }
 
-.projects *{
+.projects * {
     user-select: none;
     -moz-user-select: none;
 }
@@ -819,6 +819,7 @@ progress {
 
     .projects-div {
         display: flex;
+        font-size: calc(10px + 3vw - .5vh);
     }
 
     .projects-div img {
@@ -836,6 +837,7 @@ progress {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        width: 100%;
     }
 
     .projects-div {
@@ -858,14 +860,15 @@ progress {
         display: flex;
         flex-direction: initial;
         width: 100%;
+        max-width: none;
         position: relative;
         border-radius: 10px;
+        font-size: calc(10px + 3vw - 1vh);
     }
 
     .projects-div:hover .description,
     .projects-div:focus .description,
-    .projects-div:active .description
-        {
+    .projects-div:active .description {
         opacity: 1;
         transform: scale(1);
     }
@@ -1025,7 +1028,7 @@ progress {
     width: 100%;
     margin: 200px auto 0px auto;
     padding-top: 50px;
-    background: linear-gradient(to top, var(--var-gray), rgba(59, 59, 59, 0.457), var(--var-gray)), url(../img/contact_bg.png);
+    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.856), var(--var-gray)), url(../img/contact_bg.png);
     background-size: cover;
     background-position: center;
     z-index: -2;
