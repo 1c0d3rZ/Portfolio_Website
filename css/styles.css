@@ -291,8 +291,8 @@ nav ul li a:hover::before {
 
 .home img {
     width: 300px;
-    border: 3px solid var(--var-gray);
-    padding: 10px;
+    border: 3px solid var(--var-red);
+    padding: 5px;
     border-radius: 50%;
 }
 
