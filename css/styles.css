@@ -651,13 +651,27 @@ nav ul li a:hover::before {
     justify-self: center;
     width: 400px;
     margin: 20px 10px;
+    gap: 10px;
 }
 
 .skills-html-img,
 .skills-css-img,
 .skills-php-img,
 .skills-js-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 3rem;
+}
+
+.skills-html-img span,
+.skills-css-img span,
+.skills-php-img span,
+.skills-js-img span {
+    font-size: 1.4rem;
+    justify-self: right;
+    text-transform: uppercase;
+    font-style: oblique;
 }
 
 .skills-html-value,
@@ -665,6 +679,14 @@ nav ul li a:hover::before {
 .skills-php-value,
 .skills-js-value {
     text-align: right;
+}
+
+.skills-html-progressbar,
+.skills-css-progressbar,
+.skills-php-progressbar,
+.skills-js-progressbar {
+    display: flex;
+    justify-content: center;
 }
 
 progress {
