@@ -12,6 +12,46 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="fonts/all.min.css">
+    <style>
+        @font-face {
+            font-family: "Josefin";
+            src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            font-weight: 700;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            -webkit-scroll-behavior: smooth;
+            scrollbar-width: 10px;
+            border: 0;
+            user-select: var(--var-gold);
+            user-select: none;
+        }
+        
+         :root {
+            --var-red: #f30b39;
+            --var-dark: #000000;
+            --var-gray: #2e2e2e;
+            --var-gold: #a6ff00;
+        }
+        
+        body {
+            font-family: "Josefin", sans-serif;
+            font-size: 14px;
+            display: grid;
+            background-color: var(--var-gray);
+            scroll-behavior: smooth;
+        }
+        
+        body>span,
+        .my-page>span {
+            opacity: 0;
+            background-color: transparent;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,13 +72,16 @@
     </nav>
     <span id="my-page" width="0" height="0"></span>
     <div class="my-page">
-        <div class="home-header">
+        <div class="home-header" style="background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.334), var(--var-gray)), url(../img/bg.png);background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
             <div class="home">
                 <img src="img/profile.png" alt="profile">
                 <div class="text">
-                    <h3> Hi,<span></span></h2>
-                        <h3> My name is <span></span></h3>
-                        <h3> Apelete <span></span></h3>
+                    <h4> Hi,<span></span></h4>
+                    <h4> My name is <span></span></h4>
+                    <h4>ADZOHONOU<span></span></h4>
+                    <h4>K. Apelete<span></span></h4>
                 </div>
             </div>
             <div class="bottom-bar">
@@ -56,7 +99,9 @@
             </div>
         </div>
         <span id="about" width="0" height="0"></span>
-        <div class="about">
+        <div class="about" style="background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.42), var(--var-gray)), url(../img/about_bg.jpg);
+        background-size: cover;
+        background-position: center;">
             <div class="about-title" id="about-title"><span>About Me</span></div>
             <div class="about-details">
                 <img src="img/about.png" alt="about picture">
@@ -170,10 +215,10 @@
             <div class="contact-spec">
                 <div class="personnal">
                     <div class="contact-phone">
-                        <i class="fa fa-phone"></i>
+                        <i class="fas fa-phone"></i>
                         <div>
-                            <span>(00) 228 93 91 75 91</span>
-                            <span>(00) 228 98 05 17 45</span>
+                            <span><a href="tel://0022893917591">(00) 228 93 91 75 91</a></span>
+                            <span><a href="tel://0022898051745">(00) 228 98 05 17 45</a></span>
                         </div>
                     </div>
                     <div class="contact-home">

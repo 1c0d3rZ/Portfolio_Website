@@ -1,43 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    -webkit-scroll-behavior: smooth;
-    scrollbar-width: 10px;
-    border: 0;
-    user-select: var(--var-gold);
-    -webkit-user-drag: none;
-}
-
-:root {
-    --var-red: #f30b39;
-    --var-dark: #000000;
-    --var-gray: #2e2e2e;
-    --var-gold: #a6ff00;
-}
-
-@font-face {
-    font-family: "Josefin";
-    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
-}
-
-
-body {
-    font-family: "Josefin";
-    font-size: 14px;
-    display: grid;
-    background-color: var(--var-gray);
-    scroll-behavior: smooth;
-}
-
-body>span,
-.my-page>span {
-    opacity: 0;
-    background-color: transparent;
-}
-
-
 /* My whole entire page */
 
 .my-page {
@@ -47,6 +7,9 @@ body>span,
     justify-self: center;
     margin-top: 70px;
     background-color: var(--var-gray);
+    cursor: url(/img/bxs-bullseye.svg), auto;
+    -webkit-cursor: url(/img/bxs-bullseye.svg), auto;
+    -moz-cursor: url(/img/bxs-bullseye.svg), auto;
 }
 
 .home-header {
@@ -55,10 +18,6 @@ body>span,
     display: grid;
     height: 90vh;
     align-items: flex-end;
-    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.534), var(--var-gray)), url(../img/bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 @media (max-width: 1000px) {
@@ -66,7 +25,6 @@ body>span,
         width: 100vw;
         justify-self: center;
     }
-
     .home-header {
         margin-bottom: 600px;
         width: 100vw;
@@ -76,7 +34,6 @@ body>span,
         display: grid;
         align-content: space-between;
     }
-
     .home {
         display: flex;
         flex-wrap: wrap;
@@ -173,11 +130,9 @@ nav ul li a:hover::before {
         display: block;
         float: right;
     }
-
     nav ul li a {
         font-size: 1.5rem;
     }
-
     #comment {
         display: block;
         color: var(--var-dark);
@@ -185,11 +140,9 @@ nav ul li a:hover::before {
         align-self: flex-end;
         font-size: 2rem;
     }
-
     #comment i {
         color: var(--var-red);
     }
-
     nav ul li a::before {
         content: "";
         background-color: var(--var-red);
@@ -200,17 +153,14 @@ nav ul li a:hover::before {
         right: -5%;
         transition: .3s ease;
     }
-
     nav ul li a:hover::before {
         width: 110%;
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
-
     .menu {
         display: flex;
         padding: 0 10px;
     }
-
     ul {
         display: grid;
         position: fixed;
@@ -224,34 +174,28 @@ nav ul li a:hover::before {
         transition: all .5s;
         z-index: -1;
     }
-
     nav ul li:not(last-child) {
         display: block;
         transition: transform .5s ease;
         transition-delay: .5s;
     }
-
     nav ul li a {
         font-size: 2rem;
     }
-
     nav ul li a:hover,
     nav ul li a:active,
     nav ul li a:focus {
         background: none;
         color: var(--var-red);
     }
-
     #check:checked~.checkbtn i {
         color: var(--var-red);
     }
-
     #check:checked~ul {
         top: 60px;
         left: 0;
         transform: translateX(1);
     }
-
     .logo {
         float: left;
         margin: 5px;
@@ -281,7 +225,6 @@ nav ul li a:hover::before {
         margin: 120px auto;
         width: 100vw;
     }
-
     .home img {
         min-width: 40vw;
         padding: 0;
@@ -296,7 +239,7 @@ nav ul li a:hover::before {
     border-radius: 50%;
 }
 
-.text h3 span {
+.text h4 span {
     position: absolute;
     width: 0%;
     height: 100%;
@@ -306,7 +249,7 @@ nav ul li a:hover::before {
     animation: text_reveal_box 1s ease forwards;
 }
 
-.text h3 {
+.text h4 {
     font-size: 2.5rem;
     color: transparent;
     position: relative;
@@ -325,27 +268,37 @@ nav ul li a:hover::before {
 
 .text :nth-child(3) {
     animation: text_reveal_red 1s ease forwards;
-    animation-delay: 3.5s;
+    animation-delay: 3s;
+}
+
+.text :nth-child(4) {
+    animation: text_reveal_red 1s ease forwards;
+    animation-delay: 4s;
 }
 
 .text :nth-child(1) span {
-    animation-delay: .5s;
+    animation-delay: .8s;
 }
 
 .text :nth-child(2) span {
-    animation-delay: 1.5s;
+    animation-delay: 2s;
+    animation-direction: reverse;
 }
 
 .text :nth-child(3) span {
-    animation-delay: 3s;
+    animation-delay: 2.8s;
+}
+
+.text :nth-child(4) span {
+    animation-delay: 3.8s;
+    animation-direction: reverse;
 }
 
 @keyframes text_reveal_box {
     50% {
         width: 100%;
-        left: 0;
+        left: 0%;
     }
-
     100% {
         width: 0%;
         left: 100%;
@@ -387,7 +340,6 @@ nav ul li a:hover::before {
     .home img {
         width: 150px;
     }
-
     .text {
         font-size: 1.7rem;
     }
@@ -434,17 +386,14 @@ nav ul li a:hover::before {
         justify-content: center;
         align-items: center;
     }
-
     .socials-links {
         display: flex;
         flex-wrap: wrap;
     }
-
     .socials-links a {
         z-index: 1;
         transition: .3s;
     }
-
     .contact-btn {
         justify-self: center;
     }
@@ -456,7 +405,6 @@ nav ul li a:hover::before {
         flex-wrap: wrap;
         gap: 0px;
     }
-
     .contact-btn {
         margin: 0;
         display: flex;
@@ -467,7 +415,6 @@ nav ul li a:hover::before {
         margin: 0;
         justify-content: center;
     }
-
     .socials-links {
         width: 100%;
         margin-bottom: 30px;
@@ -476,7 +423,6 @@ nav ul li a:hover::before {
         flex-wrap: nowrap;
         justify-content: center;
     }
-
     .socials-links a {
         margin: 0;
         font-size: calc(10px + 6vw);
@@ -531,9 +477,6 @@ nav ul li a:hover::before {
     font-family: "Josefin";
     width: 100%;
     margin: 100px 0 60px 0;
-    background: linear-gradient(to top, var(--var-gray), rgba(0, 0, 0, 0.842), var(--var-gray)), url(../img/about_bg.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .about-title {
@@ -637,7 +580,6 @@ nav ul li a:hover::before {
         display: flex;
         flex-wrap: wrap;
     }
-
     .about-text {
         text-align: center;
         margin: 30px auto;
@@ -651,13 +593,11 @@ nav ul li a:hover::before {
         width: 100vw;
         margin: 60px 0 0px 0;
     }
-
     .about-details {
         width: 100vw;
         margin: 50px auto;
         padding: 10px;
     }
-
     .about-details img {
         width: 70vw;
     }
@@ -757,7 +697,6 @@ progress {
         width: 100vw;
         padding: 30px 0;
     }
-
     .skills-html,
     .skills-css,
     .skills-php,
@@ -817,17 +756,14 @@ progress {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-
     .projects-div {
         display: flex;
         font-size: calc(10px + 3vw - .5vh);
     }
-
     .projects-div img {
         width: 96%;
         justify-self: center;
     }
-
     .projects-div img {
         order: -1;
     }
@@ -840,7 +776,6 @@ progress {
         justify-content: space-around;
         width: 100%;
     }
-
     .projects-div {
         display: flex;
         flex-wrap: wrap;
@@ -848,12 +783,10 @@ progress {
         max-width: 450px;
         padding: 10px;
     }
-
     .projects-div img {
         justify-self: center;
         width: 100%;
     }
-
 }
 
 @media (max-width: 845px) {
@@ -866,14 +799,12 @@ progress {
         border-radius: 10px;
         font-size: calc(10px + 3vw - 1vh);
     }
-
     .projects-div:hover .description,
     .projects-div:focus .description,
     .projects-div:active .description {
         opacity: 1;
         transform: scale(1);
     }
-
     .description {
         top: 0;
         bottom: 0;
@@ -992,11 +923,9 @@ progress {
         justify-content: center;
         background-color: transparent;
     }
-
     .enterprise::before {
         display: none;
     }
-
     .enterprise-icon {
         width: 90%;
         background-color: #fff;
@@ -1004,17 +933,14 @@ progress {
         padding: 10px;
         justify-self: center;
     }
-
     .enterprise-title {
         font-size: calc(1rem * 3vw);
         margin-bottom: 30px;
         padding: 0;
     }
-
     .contact {
         margin-top: 50px;
     }
-
     .enterprise-icon img {
         max-width: 40vw;
     }
@@ -1083,6 +1009,11 @@ progress {
     align-items: center;
 }
 
+.contact-phone div * {
+    text-decoration: none;
+    color: inherit;
+}
+
 .contact-phone div {
     display: grid;
 }
@@ -1121,7 +1052,6 @@ progress {
         display: grid;
         justify-content: center;
     }
-
     .contact-spec {
         display: grid;
         flex-direction: column;
@@ -1138,7 +1068,6 @@ progress {
         padding-top: 50px;
         margin-bottom: 0px;
     }
-
     .contact-spec {
         display: grid;
         justify-content: center;
@@ -1147,7 +1076,6 @@ progress {
         width: 100vw;
         margin: 0%;
     }
-
     .personnal,
     .socials {
         display: flex;
@@ -1156,18 +1084,15 @@ progress {
         flex-wrap: wrap;
         margin: 0;
     }
-
     .personnal div {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         flex-direction: column;
     }
-
     .socials a i {
         padding: 5px;
     }
-
     .socials a {
         margin: 10px;
     }
