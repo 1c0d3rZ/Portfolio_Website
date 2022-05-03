@@ -67,7 +67,7 @@ nav * {
 }
 
 .logo img {
-    width: 40px;
+    width: 30px;
     margin: 10px;
 }
 
@@ -263,12 +263,12 @@ nav ul li a:hover::before {
 }
 
 .text :nth-child(2) {
-    animation-delay: 2s;
+    animation-delay: 2.5s;
 }
 
 .text :nth-child(3) {
     animation: text_reveal_red 1s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 3.2s;
 }
 
 .text :nth-child(4) {
