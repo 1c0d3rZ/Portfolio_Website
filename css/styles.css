@@ -25,6 +25,7 @@
         width: 100vw;
         justify-self: center;
     }
+
     .home-header {
         margin-bottom: 600px;
         width: 100vw;
@@ -34,6 +35,7 @@
         display: grid;
         align-content: space-between;
     }
+
     .home {
         display: flex;
         flex-wrap: wrap;
@@ -121,7 +123,8 @@ nav ul li a:hover::before {
 
 #check,
 #comment,
-.checkbtn {
+.checkbtn,
+#__close {
     display: none;
 }
 
@@ -130,19 +133,11 @@ nav ul li a:hover::before {
         display: block;
         float: right;
     }
+
     nav ul li a {
         font-size: 1.5rem;
     }
-    #comment {
-        display: block;
-        color: var(--var-dark);
-        font-style: italic;
-        align-self: flex-end;
-        font-size: 2rem;
-    }
-    #comment i {
-        color: var(--var-red);
-    }
+
     nav ul li a::before {
         content: "";
         background-color: var(--var-red);
@@ -153,14 +148,17 @@ nav ul li a:hover::before {
         right: -5%;
         transition: .3s ease;
     }
+
     nav ul li a:hover::before {
         width: 110%;
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
     }
+
     .menu {
         display: flex;
         padding: 0 10px;
     }
+
     ul {
         display: grid;
         position: fixed;
@@ -174,28 +172,38 @@ nav ul li a:hover::before {
         transition: all .5s;
         z-index: -1;
     }
+
     nav ul li:not(last-child) {
         display: block;
         transition: transform .5s ease;
         transition-delay: .5s;
     }
+
     nav ul li a {
         font-size: 2rem;
     }
+
     nav ul li a:hover,
     nav ul li a:active,
     nav ul li a:focus {
         background: none;
         color: var(--var-red);
     }
-    #check:checked~.checkbtn i {
-        color: var(--var-red);
+
+    #check:checked~label #__close {
+        display: block;
     }
+
+    #check:checked~label #__open {
+        display: none;
+    }
+
     #check:checked~ul {
         top: 60px;
         left: 0;
         transform: translateX(1);
     }
+
     .logo {
         float: left;
         margin: 5px;
@@ -225,6 +233,7 @@ nav ul li a:hover::before {
         margin: 120px auto;
         width: 100vw;
     }
+
     .home img {
         min-width: 40vw;
         padding: 0;
@@ -299,6 +308,7 @@ nav ul li a:hover::before {
         width: 100%;
         left: 0%;
     }
+
     100% {
         width: 0%;
         left: 100%;
@@ -340,6 +350,7 @@ nav ul li a:hover::before {
     .home img {
         width: 150px;
     }
+
     .text {
         font-size: 1.7rem;
     }
@@ -386,14 +397,17 @@ nav ul li a:hover::before {
         justify-content: center;
         align-items: center;
     }
+
     .socials-links {
         display: flex;
         flex-wrap: wrap;
     }
+
     .socials-links a {
         z-index: 1;
         transition: .3s;
     }
+
     .contact-btn {
         justify-self: center;
     }
@@ -405,6 +419,7 @@ nav ul li a:hover::before {
         flex-wrap: wrap;
         gap: 0px;
     }
+
     .contact-btn {
         margin: 0;
         display: flex;
@@ -415,6 +430,7 @@ nav ul li a:hover::before {
         margin: 0;
         justify-content: center;
     }
+
     .socials-links {
         width: 100%;
         margin-bottom: 30px;
@@ -423,6 +439,7 @@ nav ul li a:hover::before {
         flex-wrap: nowrap;
         justify-content: center;
     }
+
     .socials-links a {
         margin: 0;
         font-size: calc(10px + 6vw);
@@ -434,7 +451,7 @@ nav ul li a:hover::before {
 }
 
 .contact-btn {
-    margin-right: 20px;
+    margin: 0 30px;
 }
 
 .contact-btn a {
@@ -515,15 +532,17 @@ nav ul li a:hover::before {
 .about-details-text {
     display: grid;
     justify-content: center;
+    align-content: space-between;
     align-items: center;
-    gap: 50px;
+    /* gap: 50px; */
 }
 
 .about-text {
     font-size: 1.2rem;
-    text-indent: 20px;
+    padding-left: 30px;
+    text-indent: -20px;
     width: 90%;
-    line-break: initial;
+    line-height: 25px;
 }
 
 .about-text span {
@@ -552,7 +571,11 @@ nav ul li a:hover::before {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-    padding: 15px 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
     text-transform: uppercase;
     background-color: var(--var-red);
     border: 2px solid var(--var-red);
@@ -580,11 +603,13 @@ nav ul li a:hover::before {
         display: flex;
         flex-wrap: wrap;
     }
+
     .about-text {
         text-align: center;
         margin: 30px auto;
         width: 90%;
         padding: 0;
+        text-indent: 0;
     }
 }
 
@@ -593,11 +618,13 @@ nav ul li a:hover::before {
         width: 100vw;
         margin: 60px 0 0px 0;
     }
+
     .about-details {
         width: 100vw;
         margin: 50px auto;
         padding: 10px;
     }
+
     .about-details img {
         width: 70vw;
     }
@@ -660,6 +687,9 @@ nav ul li a:hover::before {
 .skills-js-img {
     display: flex;
     justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 5%;
+    gap: 40px;
     align-items: center;
     font-size: 3rem;
 }
@@ -668,7 +698,9 @@ nav ul li a:hover::before {
 .skills-css-img span,
 .skills-php-img span,
 .skills-js-img span {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
     justify-self: right;
     text-transform: uppercase;
     font-style: oblique;
@@ -679,6 +711,7 @@ nav ul li a:hover::before {
 .skills-php-value,
 .skills-js-value {
     text-align: right;
+    display: none;
 }
 
 .skills-html-progressbar,
@@ -699,7 +732,7 @@ progress {
     color: var(--var-red);
 }
 
-[class="fab fa-css3"] {
+[class="fab fa-css3-alt"] {
     color: #001aff;
 }
 
@@ -716,6 +749,7 @@ progress {
         width: 100vw;
         padding: 30px 0;
     }
+
     .skills-html,
     .skills-css,
     .skills-php,
@@ -772,26 +806,31 @@ progress {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
     .projects-div {
         display: flex;
-        font-size: calc(10px + 3vw - .5vh);
+        font-size: calc(10px + 1.5vw - .5vh);
     }
+
     .projects-div img {
         width: 96%;
         justify-self: center;
     }
+
     .projects-div img {
         order: -1;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1030px) {
     .projects-spec {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        font-size: calc(5px + .2vw - .5vh);
         width: 100%;
     }
+
     .projects-div {
         display: flex;
         flex-wrap: wrap;
@@ -799,6 +838,7 @@ progress {
         max-width: 450px;
         padding: 10px;
     }
+
     .projects-div img {
         justify-self: center;
         width: 100%;
@@ -815,12 +855,14 @@ progress {
         border-radius: 10px;
         font-size: calc(10px + 3vw - 1vh);
     }
+
     .projects-div:hover .description,
     .projects-div:focus .description,
     .projects-div:active .description {
         opacity: 1;
         transform: scale(1);
     }
+
     .description {
         top: 0;
         bottom: 0;
@@ -939,9 +981,11 @@ progress {
         justify-content: center;
         background-color: transparent;
     }
+
     .enterprise::before {
         display: none;
     }
+
     .enterprise-icon {
         width: 90%;
         background-color: #fff;
@@ -949,14 +993,17 @@ progress {
         padding: 10px;
         justify-self: center;
     }
+
     .enterprise-title {
         font-size: calc(1rem * 3vw);
         margin-bottom: 30px;
         padding: 0;
     }
+
     .contact {
         margin-top: 50px;
     }
+
     .enterprise-icon img {
         max-width: 40vw;
     }
@@ -1065,6 +1112,7 @@ progress {
         display: grid;
         justify-content: center;
     }
+
     .contact-spec {
         display: grid;
         flex-direction: column;
@@ -1081,6 +1129,7 @@ progress {
         padding-top: 50px;
         margin-bottom: 0px;
     }
+
     .contact-spec {
         display: grid;
         justify-content: center;
@@ -1089,6 +1138,7 @@ progress {
         width: 100vw;
         margin: 0%;
     }
+
     .personnal,
     .socials {
         display: flex;
@@ -1097,15 +1147,18 @@ progress {
         flex-wrap: wrap;
         margin: 0;
     }
+
     .personnal div {
         display: flex;
         flex-wrap: nowrap;
         justify-content: center;
         flex-direction: column;
     }
+
     .socials a i {
         padding: 5px;
     }
+
     .socials a {
         margin: 10px;
     }
