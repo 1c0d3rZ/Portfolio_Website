@@ -7,9 +7,9 @@
     justify-self: center;
     margin-top: 70px;
     background-color: var(--var-gray);
-    cursor: url(/img/bxs-bullseye.svg), auto;
-    -webkit-cursor: url(/img/bxs-bullseye.svg), auto;
-    -moz-cursor: url(/img/bxs-bullseye.svg), auto;
+    cursor: url(img/bxs-bullseye.svg), auto;
+    -webkit-cursor: url(img/bxs-bullseye.svg), auto;
+    -moz-cursor: url(img/bxs-bullseye.svg), auto;
 }
 
 .home-header {
