@@ -1,3 +1,15 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f34646;
+}
+
+::-webkit-scrollbar-track {
+    background: #fce3e3;
+}
+
 /* My whole entire page */
 
 .my-page {
