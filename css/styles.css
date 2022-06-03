@@ -6,6 +6,10 @@
     background: #f34646;
 }
 
+::-webkit-scrollbar-track {
+    background: var(--var-gray);
+}
+
 /* My whole entire page */
 
 .my-page {
